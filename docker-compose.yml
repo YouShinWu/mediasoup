@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  node:
+    build: ./env
+    stdin_open: true
+    tty: true
+    volumes: 
+      - ./Server:/Server
+    container_name: mediasoup
+    environment:
+    - TZ=Asia/Taipei
+    ports:
+      - 3000:3000
+      - 2000-2020:2000-2020
+      - 10000-10100:10000-10100
